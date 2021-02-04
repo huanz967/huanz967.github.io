@@ -1,0 +1,49 @@
+html{
+  background-color: LightYellow;
+  opacity: 95%;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  50% {background-color: AliceBlue;}
+}
+
+h3{
+  font-size: 20px;
+  font-family: verdana;
+}
+
+img {
+  border-radius: 8px;
+  max-width: 50%;
+  height: relative;
+  display: block;
+
+}
+
+blockquote{
+  position: absolute;
+  top: 580px;
+  right: 0;
+  font-style: bold;
+}
+
+ul{
+  list-style-type: square;
+}
+
+.alternate{
+  background-color: lightBlue;
+  border-radius: 15px;
+  width:160px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: hotpink;
+  text-decoration: none;
+
+}
