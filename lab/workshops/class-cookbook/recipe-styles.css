@@ -1,0 +1,39 @@
+html{
+  background-color: #C3C7D4;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  50% {background-color: #AFC4B1;}
+}
+.myHeader{
+  font-size: 35px;
+  font-family: Trebuchet MS, sans-serif;
+  color:#B89178;
+}
+
+
+h3{
+  font-size: 30px;
+  font-family: Trebuchet MS, sans-serif;
+  color:#B89178;
+}
+
+.alternate{
+  background-color: lightBlue;
+  border-radius: 15px;
+  width:160px;
+}
+
+p{
+  font-family: Courier New, monospace;
+}
+
+ul{
+  font-family:Tahoma, sans-serif;
+
+}
+ol{
+  font-family:Arial, sans-serif;
+
+}
