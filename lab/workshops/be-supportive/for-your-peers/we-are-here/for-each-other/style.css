@@ -1,0 +1,79 @@
+html {
+    background-color: #B89179;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 90px;
+}
+
+@font-face {
+    font-family: 'youtube_starregular';
+    src: url('fonts/youtube-star/youtube_star-webfont.woff2') format('woff2'),
+         url('fonts/youtube-star/youtube_star-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'hanging_lettersregular';
+    src: url('fonts/hanging_letters/hanged_letters-webfont.woff2') format('woff2'),
+         url('fonts/hanging_letters/hanged_letters-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'jmh_typewriterregular';
+    src: url('fonts/jmh_typewriter/jmh_typewriter-webfont.woff2') format('woff2'),
+         url('fonts/jmh_typewriter/jmh_typewriter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1 {
+   font-family: youtube_starregular;
+   font-weight: normal;
+   font-size: 90px;
+   letter-spacing: 5px;
+   text-align: center;
+   color:#F7B96D;
+}
+
+h2 {
+    font-family: hanging_lettersregular;
+    font-weight: normal;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: white;
+}
+
+div {
+    background-color: #C3C7D4;
+    width: 500px;
+    padding: 30px;
+    border-radius: 360px;
+    margin: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul, a{
+    font-family:jmh_typewriterregular;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin: 5px;
+    color:#E8EAEC;
+    text-decoration: none;
+    text-align: left;
+}
+
+a:hover {
+  color: hotpink;
+  text-decoration: none;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
