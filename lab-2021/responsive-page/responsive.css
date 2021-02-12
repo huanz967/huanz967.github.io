@@ -1,0 +1,106 @@
+html{
+  background-color: lightyellow;
+}
+
+
+h1 {
+  font-size: 32px;
+  color: #714D49;
+}
+
+h2 {
+  color: grey;
+  font-size: 25px;
+}
+
+p{
+  font-weight:bold;
+  color: brown;
+  font-size: 1.25em;
+}
+
+
+@media screen and (min-width: 768px) {
+  html{
+    background-color:#B89179;
+  }
+  h1 {
+   font-size: 52px;
+   color: #CD8395;
+ }
+
+ h2{
+   color: #DCDD48;
+
+ }
+ p {
+   font-size: 18px;
+ }
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+  html{
+    background-color:#C3C7D4;
+  }
+  h1 {
+   font-size: 48px;
+   color: #714D49;
+ }
+
+ h2{
+   color: #DCDD48;
+
+ }
+ p {
+   font-size: 15px;
+   color:#72A96F;
+ }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+  html{
+    background-color:grey;
+  }
+  h1 {
+   font-size: 52px;
+   color: #CD8395;
+ }
+
+ h2{
+   color: black;
+   font-size:45px;
+
+ }
+ p {
+   font-size: 18px;
+   color: blue;
+   font-style: normal;
+   font-weight: lighter;
+ }
+
+}
+
+
+@media screen and (max-width: 480px) {
+  html{
+    background-color:#F7B96D;
+  }
+  h1 {
+   font-size: 52px;
+   color: #225176;
+ }
+
+ h2{
+   color: #BBA6A4;
+
+ }
+ p {
+   font-size: 16px;
+ }
+
+}
