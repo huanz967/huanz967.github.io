@@ -1,6 +1,11 @@
 p{
   display:none
 }
+p:hover{
+  position:relative;
+  display:block;
+  z-index:9;
+}
 
 .one{
   position: absolute;
@@ -13,6 +18,10 @@ p{
 }
 
 
+div:hover{
+  display: block;
+  z-index: 7;
+}
 
  div:hover p{
     display: block;
