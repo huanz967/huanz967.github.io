@@ -1,0 +1,77 @@
+p{
+  display:none
+}
+
+.one{
+  position: absolute;
+  z-index: 1;
+  top:120px;
+  right:80px;
+  width: 1000px;
+  height: 700px;
+  background-color: #F8F8FF;
+}
+
+
+
+ div:hover p{
+    display: block;
+    z-index: 7;
+}
+
+.two{
+  position: absolute;
+  z-index: 2;
+  top:120px;
+  right: 180px;
+  width: 800px;
+  height: 550px;
+  color:#3E3B39;
+  background-color: #CAC9CD;
+}
+
+
+.three{
+  position: absolute;
+  z-index: 3;
+  top:120px;
+  right: 280px;
+  width: 600px;
+  height: 420px;
+  color: #6D6A6A;
+  background-color:#9B9A9C;
+}
+
+.four{
+  position: absolute;
+  z-index: 4;
+  top:120px;
+  right: 380px;
+  width: 400px;
+  height: 340px;
+  color:#9B9A9C;
+  background-color: #6D6A6A;
+}
+
+.five{
+  position: absolute;
+  z-index: 5;
+  top:120px;
+  right: 420px;
+  width: 300px;
+  height: 250px;
+  color:#CAC9CD;
+  background-color: #3E3B39;
+
+}
+
+.six{
+  position: absolute;
+  z-index: 6;
+  top:120px;
+  right: 480px;
+  width: 200px;
+  height: 140px;
+  color: white;
+  background-color: #100C07;
+}
