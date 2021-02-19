@@ -1,0 +1,139 @@
+html{
+  background-color: black;
+}
+p {
+  margin: 20px;
+  display:none
+}
+p:hover{
+  position:relative;
+  display:block;
+  z-index:9;
+
+}
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+div:hover{
+  display: block;
+  z-index: 7;
+}
+
+ div:hover p{
+    display: block;
+    z-index: 7;
+}
+
+.zero{
+  position: absolute;
+  z-index: 7;
+  color: white;
+  position: absolute;
+  width: 322px;
+  height: 268px;
+  left: 426px;
+  top: 0px;
+
+
+  background: #080809;
+  font-size: 6px;
+  text-align: center;
+  text-shadow: 3px 3px 3px lightyellow;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.one{
+  position: absolute;
+  z-index: 6;
+  color:#CAC9CD;
+  position: absolute;
+  width: 438px;
+  height: 335px;
+  left: 378px;
+  top: 0px;
+
+  background: #252526;
+  font-size: 46px;
+  text-align: center;
+  border-radius: 0px 0px 20px 20px;
+}
+
+
+
+.two{
+  position: absolute;
+  z-index: 5;
+  color:#9B9A9C;
+  width: 544px;
+  height: 409px;
+  left: 315px;
+  top: 0px;
+
+  background: #4A4D52;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 0px 0px 25px 25px;
+}
+
+
+.three{
+  position: absolute;
+  z-index: 4;
+  color: #6D6A6A;
+  width: 651px;
+  height: 470px;
+  left: 266px;
+  top: 0px;
+
+  background: #7E8084;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 0px 0px 30px 30px;
+}
+
+.four{
+  position: absolute;
+  z-index: 3;
+  color:#3E3B39;
+  width: 766px;
+  height: 535px;
+  left: 214px;
+  top: 0px;
+
+  background: #A7AAAF;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 0px 0px 35px 35px;
+}
+
+.five{
+  position: absolute;
+  z-index: 2;
+  color: #100C07;
+  width: 946px;
+  height: 625px;
+  left: 124px;
+  top: 0px;
+
+  background: #E3E5E9;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.six{
+  position: absolute;
+  z-index: 1;
+  color: black;
+  width: 1101px;
+  height: 705px;
+  left: 46px;
+  top: 0px;
+
+  background: #FCFDFF;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 0px 0px 50px 50px;
+}

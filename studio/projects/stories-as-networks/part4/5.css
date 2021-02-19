@@ -1,0 +1,139 @@
+html{
+  background-color: black;
+  cursor: url(""), auto;
+}
+
+
+p {
+  margin: 10px;
+  display:none
+}
+p:hover{
+  position:relative;
+  display:block;
+  z-index:9;
+}
+body{
+  font-family: Poppins, sans-serif;
+}
+
+div:hover{
+  display: block;
+  z-index: 7;
+}
+
+ div:hover p{
+    display: block;
+    z-index: 7;
+}
+
+.zero{
+  position: absolute;
+  z-index: 7;
+  color: white;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+
+
+  background: #080809;
+  background-image: linear-gradient(to bottom right, #080809, #252526);
+  font-size: 56px;
+  text-shadow: 2px 4px 8px #000000;
+}
+
+.one{
+  position: absolute;
+  z-index: 6;
+  color:#CAC9CD;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 0px;
+  top: 0px;
+
+
+  background: #252526;
+  background-image: linear-gradient(to bottom right, #252526, #4A4D52);
+  font-size: 46px;
+  text-shadow: 2px 4px 8px #000000;
+}
+
+
+
+.two{
+  position: absolute;
+  z-index: 5;
+  color:#9B9A9C;
+  width: 225px;
+  height: 225px;
+  left: 0px;
+  top: 0px;
+
+  background: #4A4D52;
+  background-image: linear-gradient(to bottom right, #4A4D52, #7E8084);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+
+.three{
+  position: absolute;
+  z-index: 4;
+  color: #6D6A6A;
+  width: 337.5px;
+  height: 337.5px;
+  left: 0px;
+  top: 0px;
+
+
+  background: #7E8084;
+  background-image: linear-gradient(to bottom right, #7E8084, #A7AAAF);
+  font-size: 13.5px;
+  line-height: 1.25;
+}
+
+.four{
+  position: absolute;
+  z-index: 3;
+  color:#3E3B39;
+  width: 506.25px;
+  height: 506.25px;
+  left: 0px;
+  top: 0px;
+
+  background: #A7AAAF;
+  background-image: linear-gradient(to bottom right, #A7AAAF, #E3E5E9);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.five{
+  position: absolute;
+  z-index: 2;
+  color: #100C07;
+  width: 760px;
+  height: 760px;
+  left: 0px;
+  top: 0px;
+
+  background: #E3E5E9;
+  background-image: linear-gradient(to bottom right, #E3E5E9, #FCFDFF);
+  font-size: 12px;
+}
+
+.six{
+  position: absolute;
+  z-index: 1;
+  color: black;
+  width: 1140px;
+  height: 1140px;
+  left: 0px;
+  top: 0px;
+
+  background: #FCFDFF;
+  background-image: linear-gradient(to bottom right, #FCFDFF, black);
+  font-size: 13px;
+}

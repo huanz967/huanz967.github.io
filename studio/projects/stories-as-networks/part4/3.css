@@ -1,0 +1,131 @@
+html{
+  background-color: black;
+}
+p {
+  display:none
+}
+p:hover{
+  position:relative;
+  display:block;
+  z-index:9;
+}
+body{
+  font-family: Poppins, sans-serif;
+}
+
+div:hover{
+  display: block;
+  z-index: 7;
+}
+
+ div:hover p{
+    display: block;
+    z-index: 7;
+}
+
+.zero{
+  position: absolute;
+  z-index: 7;
+  color: white;
+  position: absolute;
+  width: 347px;
+  height: 268px;
+  left: 0px;
+  top: 0px;
+
+
+  background: #080809;
+  box-shadow: 10px 10px 15px #282828;
+
+  font-size: 56px;
+}
+
+.one{
+  position: absolute;
+  z-index: 6;
+  color:#CAC9CD;
+  position: absolute;
+  width: 438px;
+  height: 335px;
+  left: 0px;
+  top: 0px;
+
+
+  background: #252526;
+  box-shadow: 10px 10px 15px rgba(37, 37, 38, 0.44);
+  font-size: 46px;
+}
+
+
+
+.two{
+  position: absolute;
+  z-index: 5;
+  color:#9B9A9C;
+  width: 544px;
+  height: 409px;
+  left: 0px;
+  top: 0px;
+
+  background: #4A4D52;
+  box-shadow: 10px 10px 15px rgba(74, 77, 82, 0.48);
+  font-size: 30px;
+}
+
+
+.three{
+  position: absolute;
+  z-index: 4;
+  color: #6D6A6A;
+  width: 651px;
+  height: 470px;
+  left: 0px;
+  top: 0px;
+
+
+  background: #7E8084;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+}
+
+.four{
+  position: absolute;
+  z-index: 3;
+  color:#3E3B39;
+  width: 766px;
+  height: 535px;
+  left: 0px;
+  top: 0px;
+
+  background: #A7AAAF;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+}
+
+.five{
+  position: absolute;
+  z-index: 2;
+  color: #100C07;
+  width: 946px;
+  height: 625px;
+  left: 0px;
+  top: 0px;
+
+  background: #E3E5E9;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  font-size: 12px;
+}
+
+.six{
+  position: absolute;
+  z-index: 1;
+  color: black;
+  width: 1092px;
+  height: 707px;
+  left: 0px;
+  top: 0px;
+
+  background: #FCFDFF;
+  box-shadow: 0px 4px 4px #FCFDFF;
+  font-size: 13px;
+}

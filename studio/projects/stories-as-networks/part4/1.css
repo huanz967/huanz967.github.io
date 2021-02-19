@@ -1,0 +1,105 @@
+html{
+  background-color: black;
+}
+h1{
+  color: white;
+}
+p {
+  display:none
+}
+p:hover{
+  position:relative;
+  display:block;
+  z-index:9;
+}
+
+
+div:hover{
+  display: block;
+  z-index: 7;
+}
+
+ div:hover p{
+    display: block;
+    z-index: 7;
+}
+
+.zero{
+  position: absolute;
+  z-index: 7;
+  top:120px;
+  left:50px;
+  width: 50px;
+  height: 50px;
+  color: white;
+  background-color: #100C07;
+}
+.one{
+  position: absolute;
+  z-index: 6;
+  top:120px;
+  left:50px;
+  width: 100px;
+  height: 100px;
+  color:#CAC9CD;
+  background-color: #3E3B39;
+}
+
+
+
+.two{
+  position: absolute;
+  z-index: 5;
+  top:120px;
+  left:50px;
+  width: 200px;
+  height: 200px;
+  color:#9B9A9C;
+  background-color: #6D6A6A;
+}
+
+
+.three{
+  position: absolute;
+  z-index: 4;
+  top:120px;
+  left:50px;
+  width: 350px;
+  height: 350px;
+  color: #6D6A6A;
+  background-color:#9B9A9C;
+}
+
+.four{
+  position: absolute;
+  z-index: 3;
+  top:120px;
+  left:50px;
+  width: 550px;
+  height: 550px;
+  color:#3E3B39;
+  background-color: #CAC9CD;
+}
+
+.five{
+  position: absolute;
+  z-index: 2;
+  top:120px;
+  left:50px;
+  width: 800px;
+  height: 800px;
+  color: #100C07;
+  background-color: #F8F8FF;
+
+}
+
+.six{
+  position: absolute;
+  z-index: 1;
+  top:120px;
+  left:50px;
+  width: 1100px;
+  height: 1100px;
+  color: black;
+  background-color: white;
+}
