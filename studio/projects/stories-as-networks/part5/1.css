@@ -1,0 +1,236 @@
+html{
+  background-color: black;
+}
+p {
+  margin: 1.5vw;
+  display:none;
+}
+p:hover{
+  position:relative;
+  display:block;
+  z-index:9;
+
+}
+
+#mycredit{
+  display:none;
+}
+#mycredit:hover{
+
+  position:relative;
+  display:block;
+  z-index:999;
+  font-size: 5px;
+}
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+div:hover{
+  display: block;
+  z-index: 7;
+}
+
+ div:hover p{
+    display: block;
+    z-index: 7;
+}
+
+.zero{
+  position: absolute;
+  z-index: 7;
+  color: white;
+  position: absolute;
+  width: 322px;
+  height: 268px;
+  left: 426px;
+  top: 0px;
+
+
+  background: #080809;
+  font-size: 4vw;
+  text-align: center;
+  text-shadow: 1px 1px 1px lightyellow;
+  border-radius: 0px 0px 10px 10px;
+
+}
+
+.one{
+  position: absolute;
+  z-index: 6;
+  color:#CAC9CD;
+  position: absolute;
+  width: 438px;
+  height: 335px;
+  left: 378px;
+  top: 0px;
+
+  background: #252526;
+  font-size: 3.8vw;
+  text-align: left;
+  border-radius: 0px 0px 20px 20px;
+}
+
+
+
+.two{
+  position: absolute;
+  z-index: 5;
+  color:#9B9A9C;
+  width: 544px;
+  height: 409px;
+  left: 315px;
+  top: 0px;
+
+  background: #4A4D52;
+  font-size: 2.8vw;
+  text-align: left;
+  border-radius: 0px 0px 25px 25px;
+}
+
+
+.three{
+  position: absolute;
+  z-index: 4;
+  color: #6D6A6A;
+  width: 651px;
+  height: 470px;
+  left: 266px;
+  top: 0px;
+
+  background: #7E8084;
+  font-size: 1.85vw;
+  text-align: left;
+  border-radius: 0px 0px 30px 30px;
+}
+
+.four{
+  position: absolute;
+  z-index: 3;
+  color:#3E3B39;
+  width: 766px;
+  height: 535px;
+  left: 214px;
+  top: 0px;
+
+  background: #A7AAAF;
+  font-size: 1.3vw;
+  text-align: left;
+  border-radius: 0px 0px 35px 35px;
+}
+
+.five{
+  position: absolute;
+  z-index: 2;
+  color: #100C07;
+  width: 946px;
+  height: 625px;
+  left: 124px;
+  top: 0px;
+
+  background: #E3E5E9;
+  font-size: 1.15vw;
+  text-align: left;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.six{
+  position: absolute;
+  z-index: 1;
+  color: black;
+  width: 1101px;
+  height: 705px;
+  left: 46px;
+  top: 0px;
+
+  background: #FCFDFF;
+  font-size: 1.1vw;
+  text-align: left;
+  border-radius: 0px 0px 50px 50px;
+}
+
+
+
+@media screen and (max-width: 480px){
+
+    p {
+        margin: 1.5vw;
+        display:none;
+      }
+    p:click{
+        position:relative;
+        display:block;
+        z-index:9;
+
+      }
+
+    .zero{
+      width: 148px;
+      height: 290px;
+      left: 120px;
+      top: 0px;
+      overflow-y: scroll;
+
+      font-size: 26px;
+    }
+
+    .one{
+      width: 183px;
+      height: 346px;
+      left: 103px;
+      top: 0px;
+      overflow-y: scroll;
+      font-size: 26px;
+    }
+
+    .two{
+      width: 218px;
+      height: 406px;
+      left: 85px;
+      top: 0px;
+      overflow-y: scroll;
+      font-size: 24px;
+    }
+
+    .three{
+      width: 251px;
+      height: 456px;
+      left: 68px;
+      top: 0px;
+      overflow-y: scroll;
+      font-size: 20px;
+    }
+
+    .four{
+      width: 300px;
+      height: 511px;
+      left: 43px;
+      top: 0px;
+      overflow-y: scroll;
+      font-size: 16px;
+    }
+
+    .five{
+      width: 334px;
+      height: 619px;
+      left: 27px;
+      top: 0px;
+      overflow-y: scroll;
+      font-size: 14px;
+    }
+
+    .six{
+      width: 361px;
+      height: 812px;
+      left: 14px;
+      top: 0px;
+      overflow-y: scroll;
+      font-size: 13px;
+    }
+
+
+
+
+
+}
