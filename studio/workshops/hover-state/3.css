@@ -1,0 +1,33 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background-color: #B59BAB;
+    overflow: hidden
+}
+
+.canvas {
+	width: 100vw;
+	height: 100vh;
+  padding-top: 100px;
+	position: relative;
+}
+
+
+/* phrase style */
+p,h1 {
+    font-family: arial;
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    line-height: 0.8;
+}
+
+
+.phrase1:hover {
+  	transform: rotate(15deg);
+    font-weight: lighter;
+    cursor: pointer;
+}

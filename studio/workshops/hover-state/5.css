@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+}
+
+.canvas {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    text-align: center;
+    font-family: arial;
+}
+
+.phrase1{
+    padding: 20px;
+    font-size: 80px;
+    color: white;
+    line-height: 1.5;
+}
+
+.phrase1:hover {
+    line-height: 1;
+    font-size: 60px;
+    cursor: pointer;
+
+}

@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+}
+
+.canvas {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    text-align: center;
+
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.phrase1{
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    padding: 20px;
+    font-size: 80px;
+    color: white;
+}
+
+.phrase1:hover {
+    color:red;
+    text-decoration: line-through;
+    cursor: pointer;
+    font-family: arial;
+}

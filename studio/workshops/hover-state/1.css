@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+}
+
+.canvas {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+
+.lgbtq:hover{
+  background-image: linear-gradient(red, yellow,green, blue, purple);
+}
