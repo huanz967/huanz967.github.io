@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Yusei+Magic&display=swap');
+
+html{
+  background-color: black;
+}
+
+body{
+  font-family: 'lato', sans-serif;
+}
+
+h1{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 7vh;
+}
+h2{
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+h3{
+  position:fixed;
+  font-size: 1.7vh;
+  color:white;
+  margin: 1.5vw;
+}
+
+p {
+  margin: 1.5vw;
+  display:none;
+}
+
+
+
+
+div:hover{
+  display: block;
+  z-index: 7;
+}
+
+ div:hover p{
+    display: block;
+    z-index: 7;
+}
+
+.zero{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  color: white;
+  width: 30%;
+  height: 37%;
+  top: 0px;
+  background: #080809;
+  background-image: linear-gradient( #080809, #252526);
+
+  text-align: center;
+  border-radius: 0px 0px 10px 10px;
+
+}
+
+.one{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  color:#CAC9CD;
+  position: absolute;
+  width: 40%;
+  height: 45%;
+  top: 0px;
+  background: #252526;
+  background-image: linear-gradient( #252526, #4A4D52);
+  font-size: 6.9vh;
+  line-height: 1.5;
+  text-align: left;
+  border-radius: 0px 0px 20px 20px;
+}
+
+
+
+.two{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  color:#9B9A9C;
+  width: 50%;
+  height: 56%;
+  top: 0px;
+  background: #4A4D52;
+  background-image: linear-gradient( #4A4D52, #7E8084);
+  font-size: 4.8vh;
+  line-height: 1.5;
+  text-align: left;
+  border-radius: 0px 0px 25px 25px;
+}
+
+
+.three{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  color: #6D6A6A;
+  width: 60%;
+  height: 68%;
+  top: 0px;
+  background: #7E8084;
+  background-image: linear-gradient( #7E8084, #A7AAAF);
+  font-size: 2.99vh;
+  line-height: 1.5;
+  text-align: left;
+  border-radius: 0px 0px 30px 30px;
+}
+
+.four{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color:#3E3B39;
+  width: 70%;
+  height: 80%;
+  top: 0px;
+  background: #A7AAAF;
+  background-image: linear-gradient( #A7AAAF, #E3E5E9);
+  font-size: 2.3vh;
+  line-height: 1.5;
+  text-align: left;
+  border-radius: 0px 0px 35px 35px;
+}
+
+.five{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #100C07;
+  width: 80%;
+  height: 90%;
+  top: 0px;
+  background: #E3E5E9;
+  background-image: linear-gradient( #E3E5E9, #FCFDFF);
+  font-size: 2vh;
+  line-height: 1.5;
+  text-align: left;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.six{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: black;
+  width: 90%;
+  height: 115%;
+  top: 0px;
+  background: #FCFDFF;
+  background-image: linear-gradient( #FCFDFF, #A7AAAF,black);
+  font-size: 1.8vh;
+  line-height: 1.5;
+  text-align: left;
+  border-radius: 0px 0px 50px 50px;
+}
+
+
+
+@media screen and (max-width: 480px){
+    h1{
+      font-size: 8vw;
+    }
+    h2{
+      font-size: 4vw;
+    }
+
+    p {
+        margin: 1.5vw;
+        display:none;
+      }
+    p:click{
+        position:relative;
+        display:block;
+        z-index:9;
+
+      }
+
+    .zero{
+      overflow-y: scroll;
+
+
+    }
+
+    .one{
+
+      overflow-y: scroll;
+      font-size: 4.15vh;
+    }
+
+    .two{
+
+      overflow-y: scroll;
+      font-size: 3.6vh;
+    }
+
+    .three{
+
+      overflow-y: scroll;
+      font-size: 2.9vh;
+    }
+
+    .four{
+
+      overflow-y: scroll;
+      font-size: 2.3vh;
+    }
+
+    .five{
+
+      overflow-y: scroll;
+      font-size: 2vh;
+    }
+
+    .six{
+
+      overflow-y: scroll;
+      font-size: 1.8vh;
+    }
+
+
+
+
+
+}

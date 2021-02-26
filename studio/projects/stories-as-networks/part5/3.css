@@ -129,11 +129,13 @@ div:hover{
 
 .five{
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
   color: #100C07;
-  width: 946px;
-  height: 625px;
-  left: 124px;
+  width: 80%;
+  height: 85%;
+
   top: 0px;
 
   background: #E3E5E9;
@@ -145,11 +147,13 @@ div:hover{
 
 .six{
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
   color: black;
-  width: 1101px;
-  height: 705px;
-  left: 46px;
+  width: 90%;
+  height: 95%;
+
   top: 0px;
 
   background: #FCFDFF;
@@ -160,7 +164,7 @@ div:hover{
 }
 
 
-
+/*480*
 @media screen and (max-width: 480px){
 
     p {
