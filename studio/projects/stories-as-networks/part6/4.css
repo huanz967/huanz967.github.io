@@ -22,7 +22,32 @@ h3{
   color:white;
   margin: 1.5vw;
 }
+h4{
+  position:sticky;
+  font-size: 0.7vw;
+  color:white;
+  z-index:999;
+}
 
+h5{
+  font-size: 0.9vw;
+
+
+}
+#btn{
+  z-index:999;
+  width:2.9vw;
+  height:2.9vh;
+  color:black;
+  background-image: linear-gradient( #FCFDFF, #A7AAAF,black);
+  border-radius: 100px / 50px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+
+}
 p {
   margin: 1.5vw;
 
