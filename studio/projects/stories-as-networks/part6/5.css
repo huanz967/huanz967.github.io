@@ -27,7 +27,7 @@ p {
   margin: 1.5vw;
   display:none;
 }
-p:hover{
+p:active {
   position:relative;
   display:block;
   z-index:9;
@@ -35,14 +35,12 @@ p:hover{
 }
 
 
-
-
-div:hover{
+div :active{
   display: block;
   z-index: 7;
 }
 
- div:hover p{
+ div:active p{
     display: block;
     z-index: 7;
 }

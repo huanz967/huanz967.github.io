@@ -25,21 +25,18 @@ h3{
 
 p {
   margin: 1.5vw;
-  display:none;
+
 }
-
-
-
 
 div:hover{
   display: block;
   z-index: 7;
 }
 
- div:hover p{
-    display: block;
-    z-index: 7;
-}
+
+
+
+
 
 .zero{
   position: absolute;
@@ -55,7 +52,7 @@ div:hover{
 
   text-align: center;
   border-radius: 0px 0px 10px 10px;
-
+  cursor: pointer;
 }
 
 .one{
@@ -74,9 +71,8 @@ div:hover{
   line-height: 1.5;
   text-align: left;
   border-radius: 0px 0px 20px 20px;
+  cursor: pointer;
 }
-
-
 
 .two{
   position: absolute;
