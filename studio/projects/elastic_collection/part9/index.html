@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Films</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- add link to your javascript. be sure it includes "defer" -->
+    <script type="text/javascript" src="airtable.browser.js" defer></script>
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="filter">
+        <!-- it's a good practice to use buttons for this instead of span -->
+        <!-- note the 'data-color' attributes added to each button -->
+        <button class="js-red" data-color="red">Red</button>
+        <button class="js-orange" data-color="orange">Orange</button>
+        <button class="js-yellow" data-color="yellow">Yellow</button>
+        <button class="js-green" data-color="green">Green</button>
+        <button class="js-blue" data-color="blue">Blue</button>
+        <button class="js-purple" data-color="purple">Purple</button>
+        <button class="js-reset">Reset All</button>
+      </div>
+    </div>
+  </body>
+</html>

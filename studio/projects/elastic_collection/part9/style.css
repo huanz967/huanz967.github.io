@@ -1,0 +1,71 @@
+body {
+      font-family: Arial;
+}
+
+
+
+h1 {
+    font-weight: normal;
+    font-size: 1.0rem;
+    margin: 0;
+}
+
+
+/* reset button style */
+button {
+    font-size: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.scenes{
+    display: grid;
+  	grid-template-columns: repeat(4, 1fr);
+  	grid-gap: 2rem;
+  	flex-basis: 0;
+  	flex-grow: 999;
+  	min-width: 50%;
+}
+
+
+.scene-image {
+   width:200px;
+   height:100px;
+   float:left;
+   margin:0;
+   padding:0;
+}
+
+
+
+.filter {
+      padding: 3rem;
+      cursor: pointer;
+      z-index:1000;
+      position: relative; /* z-index will only work when position is relative, absolute, sticky, or fixed */
+}
+
+.js-red{
+      background-color: red;
+}
+
+.js-orange{
+      background-color: orange;
+}
+
+.js-yellow{
+      background-color: yellow;
+}
+
+.js-green{
+      background-color: green;
+}
+.js-blue{
+      background-color: blue;
+}
+.js-purple{
+      background-color: purple;
+}
