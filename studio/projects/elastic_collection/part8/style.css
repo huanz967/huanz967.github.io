@@ -1,74 +1,80 @@
 body {
-  font-family: Arial;
-
+	font-family: Arial;
 }
-
-
 
 h1 {
-  font-weight: normal;
-  font-size: 1.0rem;
-  margin: 0;
+	font-weight: normal;
+	font-size: 1.0rem;
+	margin: 0;
 }
 
-
+/* reset button style */
+button {
+  font-size: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 
 .scenes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
-    flex-basis: 0;
-    flex-grow: 999;
-    min-width: 50%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+	flex-basis: 0;
+	flex-grow: 999;
+	min-width: 50%;
 }
 
-.scene-image{
-  width: 350px;
-  height: auto;
-  filter: blur(5px);
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden;
+.scene-image {
+	width: 350px;
+	height: auto;
+	filter: blur(5px);
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
 }
 
-.scene-image:hover{
-  filter: blur(0px);
+.scene-image:hover {
+	filter: blur(0px);
 }
-
 
 .scene-container {
-   position: absolute;
-   width: 250px;
-   height: 250px;
-   overflow: hidden;
-   border-radius: 50%;
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	border-radius: 50%;
 }
-
 
 .filter {
-  padding: 3rem;
-  cursor: pointer;
-  z-index:1000;
+	padding: 3rem;
+	cursor: pointer;
+	z-index: 1000;
+  position: relative; /* z-index will only work when position is relative, absolute, sticky, or fixed */
 }
 
-.js-red{
-  background-color: red;
+.js-red {
+	background-color: red;
 }
 
-.js-orange{
-  background-color: orange;
+.js-orange {
+	background-color: orange;
 }
 
-.js-yellow{
-  background-color: yellow;
+.js-yellow {
+	background-color: yellow;
 }
 
-.js-green{
-  background-color: green;
+.js-green {
+	background-color: green;
 }
-.js-blue{
-  background-color: blue;
+
+.js-blue {
+	background-color: blue;
 }
-.js-purple{
-  background-color: purple;
+
+.js-purple {
+	background-color: purple;
 }
