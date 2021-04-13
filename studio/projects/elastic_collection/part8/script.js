@@ -119,21 +119,22 @@ function showScenes() {
 
 	/* move filtering stuff outside the forEach loop
 	 * using this method, you don't have to repeat yourself
-	 * first, select all buttons inside .filter and attach click event listeners to them */
-	document.querySelectorAll('.filter > button').forEach((button) => {
-		button.addEventListener('click', () => {
+	 * add event listener to .filter and use event delegation to read 'data-color' attributes of clicked buttons */
+	document.querySelector('.filter').addEventListener('click', (event) => {
+		if (event.target.tagName === 'BUTTON') {
+			// check if the element being clicked on is a button
 			var scenes = document.querySelectorAll('.scene-container');
 
-			if (button.hasAttribute('data-color')) {
+			if (event.target.hasAttribute('data-color')) {
 				/* this selects all .scene-container elements with the class equal to the 'data-color' attribute of the button
-				 * if the button has a 'data-color' of 'red', then this will select .scene-container.red */
-				var matchingScenes = document.querySelectorAll(`.scene-container.${button.getAttribute('data-color')}`);
+				* if the button has a 'data-color' of 'red', then this will select .scene-container.red */
+				var matchingScenes = document.querySelectorAll(`.scene-container.${event.target.getAttribute('data-color')}`);
 
 				scenes.forEach((scene) => scene.style.display = 'none');
 				matchingScenes.forEach((scene) => scene.style.display = '');
 			} else {
 				scenes.forEach((scene) => scene.style.display = '');
 			}
-		});
+		}
 	});
 }
