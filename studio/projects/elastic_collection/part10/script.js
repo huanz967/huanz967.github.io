@@ -42,6 +42,11 @@ function gotAllScenes(err) {
       consoleLogScenes();
     try {
           showScenes();
+          showScenes();
+          showScenes();
+          showScenes();
+          showScenes();
+          showScenes();
         } catch (e) {
           console.log(e);
         }
