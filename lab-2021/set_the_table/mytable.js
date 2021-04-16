@@ -16,6 +16,7 @@ var base = new Airtable({ apiKey: "keyiD7ltbsDgqaEHu" }).base(
 
 // create an empty array for all of your items to go into
 let allItems = [];
+let allFoodItems = [];
 
 // inside the () after base put the name of YOUR spreadsheet
 base('my-dinner-table').select({}).eachPage(function page(tableItems, fetchNextPage) {
@@ -39,27 +40,30 @@ base('my-dinner-table').select({}).eachPage(function page(tableItems, fetchNextP
   setTable(allItems);
 });
 
+// make a container div and append it to the body
+// this way we can append all of our items to a div which we can style later
+let container = document.createElement("div");
+container.classList.add("container");
+document.body.appendChild(container);
+
+
 
 function setTable(allItems) {
-  // make a container div and append it to the body
-  // this way we can append all of our items to a div which we can style later
-  let container = document.createElement("div");
-  container.classList.add("container");
-  document.body.appendChild(container);
-
   // run a forEach loop on your array, with each item
   // then make a new HTML element and position it somewhere on the page
   allItems.forEach(function(item) {
     // store the name of the item (from your spreadsheet) into a variable
-    let name = item.fields.items;
+    let name = item.fields.name;
     // store the image for the item into a variable
     let imageUrl = item.fields.images[0].url;
+    let image = document.createElement('img');
+     image.src = imageUrl;
+     image.classList.add(item.fields.class_name);
+     container.appendChild(image);
 
-
-    // let itemImage = document.createElement('img');
-    // itemImage.src = imageUrl;
-    // itemImage.classList.add(item.fields.kind_of_item);
-    // container.appendChild(itemImage);
+     if (item.fields.type === "food") {
+      allFoodItems.push(item);
+    }
 
     // the following code is for making multiple cups and plates etc out of just one Airtable record and then positioning them in specific spots on the table. these are the names I used in my airtable, yours will be different!!
     // here i want to do different things with different items
@@ -89,35 +93,48 @@ function setTable(allItems) {
     }
 
     // Same idea with the plates.
-    // if (name === "Plate") {
-    //   for (var i=0; i<3; i++) {
-    //     let plate = document.createElement('img');
-    //     plate.src = imageUrl;
-    //     plate.classList.add("plate");
+     if (name === "Plate") {
+       for (var i=0; i<3; i++) {
+         let plate = document.createElement('img');
+         plate.src = imageUrl;
+         plate.classList.add("plate");
 
-    //     if (i === 0) {
-    //       plate.style.left = "70%";
-    //       plate.style.top = "20%";
-    //     }
-    //     if (i === 1) {
-    //       plate.style.left = "55%";
-    //       plate.style.top = "60%";
-    //     }
-    //     if (i === 2) {
-    //       plate.style.left = "5%";
-    //       plate.style.top = "25%";
-    //     }
+         if (i === 0) {
+           plate.style.left = "70%";
+           plate.style.top = "20%";
+         }
+         if (i === 1) {
+           plate.style.left = "55%";
+           plate.style.top = "60%";
+         }
+         if (i === 2) {
+           plate.style.left = "5%";
+           plate.style.top = "25%";
+         }
 
-    //     container.appendChild(plate);
-    //   }
-    // }
+         container.appendChild(plate);
+       }
+     }
 
     // Same idea with the tablecloth.
-    // if (name === "Tablecloth") {
-    //   let tablecloth = document.createElement('img');
-    //   tablecloth.src = imageUrl;
-    //   tablecloth.classList.add("tablecloth");
-    //   container.appendChild(tablecloth);
-    // }
+     if (name === "Tablecloth") {
+       let tablecloth = document.createElement('img');
+       tablecloth.src = imageUrl;
+       tablecloth.classList.add("tablecloth");
+       container.appendChild(tablecloth);
+     }
+  })
+}
+
+let showFoodButton = document.getElementById("show-food");
+showFoodButton.addEventListener('click', showAllTheFood);
+
+function showAllTheFood() {
+  allFoodItems.forEach(function(foodItem) {
+    let food = document.createElement('img');
+    food.src = foodItem.fields.images[0].url;
+    food.classList.add(foodItem.fields.class_name);
+    food.style.display = "block";
+    container.appendChild(food);
   })
 }
