@@ -18,7 +18,7 @@ body {
 a{
   color:white;
   text-decoration: none;
-  
+
 }
 
 a:active {
@@ -59,31 +59,31 @@ button {
 }
 
 .js-red{
-      color:red;
-      background-color: red;
+      color:#8D4338;
+      background-color: #8D4338;
 }
 
 .js-orange{
-      color: orange;
-      background-color: orange;
+      color: #C97534;
+      background-color: #C97534;
 }
 
 .js-yellow{
-      color: yellow;
-      background-color: yellow;
+      color: #FBE870;
+      background-color: #FBE870;
 }
 
 .js-green{
-      color: green;
-      background-color: green;
+      color: #5D7447;
+      background-color: #5D7447;
 }
 .js-blue{
-      color: blue;
-      background-color: blue;
+      color: #09568D;
+      background-color: #09568D;
 }
 .js-purple{
-      color: purple;
-      background-color: purple;
+      color: #E6C1F2;
+      background-color: #E6C1F2;
 }
 
 

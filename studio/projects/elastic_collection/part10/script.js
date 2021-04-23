@@ -96,12 +96,13 @@ function showScenes() {
                 var sceneContainer = document.createElement("div");
                 sceneContainer.classList.add("scene-container");
 
+                //getting the images from airtable from the first line
                 var sceneImage = document.createElement("img");
                 sceneImage.classList.add("scene-image");
                 sceneImage.src = scene.fields.film_image[0].url;
                 sceneContainer.append(sceneImage);
 
-                // fixed this part
+                // the images will show up in random order
                 sceneContainer.style.left = (100 * Math.random()) + '%';
                 sceneContainer.style.top = (100 * Math.random()) + '%';
 
