@@ -1,0 +1,30 @@
+<html>
+<head></head>
+<body onload="InitThis();">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="JsCode.js"></script>
+    <div align="center">
+        <canvas id="myCanvas" width="500" height="400" style="border:5px solid black"></canvas>
+        <br /><br />
+        <button onclick="javascript:clearArea();return false;">Clear Area</button>
+        Line width : <select id="selWidth">
+            <option value="1">1</option>
+            <option value="9" selected="selected">9</option>
+            <option value="15">15</option>
+            <option value="27">27</option>
+            
+        </select>
+        Color : <select id="selColor">
+            <option value="black">black</option>
+            <option value="#436587" selected="selected">blue</option>
+            <option value="#A7474A">red</option>
+            <option value="#8FB998">green</option>
+            <option value="#FBE870">yellow</option>
+            <option value="#71648B">purple</option>
+        </select>
+        <br>
+        <br>
+        <button>Done</button>
+    </div>
+</body>
+</html>
