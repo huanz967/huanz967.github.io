@@ -79,7 +79,10 @@ function downloadImage() {
     URL.revokeObjectURL(a.href);
     document.getElementById("root").appendChild(result);
   }, "image/png");
+
+  result.toBlob((blob) => window.location.href = URL.createObjectURL(blob));
 }
+
 
 
 //function downloadImage() {
