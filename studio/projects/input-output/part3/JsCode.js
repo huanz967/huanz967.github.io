@@ -43,3 +43,27 @@ function clearArea() {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
+
+function downloadImage() {
+    var canvas = document.getElementById("myCanvas");
+    var image = canvas.toDataURL();
+
+    var aLink = document.createElement('a');
+    var evt = document.createEvent("HTMLEvents");
+    evt.initEvent("click");
+    aLink.download = 'image.png';
+    aLink.href = image;
+    aLink.dispatchEvent(evt);
+}
+
+//function downloadImage() {
+//    var canvas = document.getElementById("myCanvas");
+//    var image = canvas.toDataURL();
+
+//    var aLink = document.createElement('a');
+//    var evt = document.createEvent("HTMLEvents");
+//    evt.initEvent("click");
+//    aLink.download = 'image.png';
+//    aLink.href = image;
+//    aLink.dispatchEvent(evt);
+//}
