@@ -57,8 +57,8 @@ document.getElementById('myCanvas').addEventListener("click", function(e) {
 function downloadImage() {
   const result = document.createElement("canvas");
   result.id = "result";
-  result.width = 2500;
-  result.height = 2000;
+  result.width = 3500;
+  result.height = 3000;
 
   const context = result.getContext("2d");
   const pattern = context.createPattern(
@@ -80,19 +80,5 @@ function downloadImage() {
     document.getElementById("root").appendChild(result);
   }, "image/png");
 
-  result.toBlob((blob) => window.location.href = URL.createObjectURL(blob));
+  sessionStorage.setItem("pattern", result.toDataURL());
 }
-
-
-
-//function downloadImage() {
-//    var canvas = document.getElementById("myCanvas");
-//    var image = canvas.toDataURL();
-
-//    var aLink = document.createElement('a');
-//    var evt = document.createEvent("HTMLEvents");
-//    evt.initEvent("click");
-//    aLink.download = 'image.png';
-//    aLink.href = image;
-//    aLink.dispatchEvent(evt);
-//}
