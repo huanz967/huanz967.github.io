@@ -1,84 +1,83 @@
-var mousePressed = false;
-var lastX, lastY;
-var ctx;
+let ctx;
+let mousePressed = false;
+let lastX;
+let lastY;
 
-function InitThis() {
-    ctx = document.getElementById('myCanvas').getContext("2d");
+initCanvas(document.getElementById('myCanvas'));
+document.getElementById('clearButton').addEventListener('click', clearArea);
+document.getElementById('completeButton').addEventListener('click', makePattern);
 
-    $('#myCanvas').mousedown(function (e) {
-        mousePressed = true;
-        Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
-    });
+function initCanvas(canvas = document.getElementById('myCanvas')) {
+  ctx = canvas.getContext('2d');
 
-    $('#myCanvas').mousemove(function (e) {
-        if (mousePressed) {
-            Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, true);
-        }
-    });
+  canvas.addEventListener('mousedown', function (event) {
+    const rect = this.getBoundingClientRect();
+    mousePressed = true;
+    draw(event.pageX - rect.left, event.pageY - rect.top, false);
+  });
 
-    $('#myCanvas').mouseup(function (e) {
-        mousePressed = false;
-    });
-	    $('#myCanvas').mouseleave(function (e) {
-        mousePressed = false;
-    });
+  canvas.addEventListener('mousemove', function (event) {
+    if (mousePressed) {
+      const rect = this.getBoundingClientRect();
+      draw(event.pageX - rect.left, event.pageY - rect.top, true);
+    }
+  });
+
+  canvas.addEventListener('mouseup', function (event) {
+    mousePressed = false;
+  });
+
+  canvas.addEventListener('mouseleave', function (event) {
+    mousePressed = false;
+  });
 }
 
-function Draw(x, y, isDown) {
-    if (isDown) {
-        ctx.beginPath();
-        ctx.strokeStyle = $('#selColor').val();
-        ctx.lineWidth = $('#selWidth').val();
-        ctx.lineJoin = "round";
-        ctx.moveTo(lastX, lastY);
-        ctx.lineTo(x, y);
-        ctx.closePath();
-        ctx.stroke();
-    }
-    lastX = x; lastY = y;
+function draw(x, y, isDown) {
+  if (isDown) {
+    ctx.beginPath();
+    ctx.strokeStyle = document.getElementById('selColor').value;
+    ctx.lineWidth = document.getElementById('selWidth').value;
+    ctx.lineJoin = 'round';
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(x, y);
+    ctx.closePath();
+    ctx.stroke();
+  }
+
+  lastX = x;
+  lastY = y;
 }
 
 function clearArea() {
-    // Use the identity matrix while clearing the canvas
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  // Use the identity matrix while clearing the canvas
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
 
-// Convert canvas to image
-document.getElementById('myCanvas').addEventListener("click", function(e) {
-    var canvas = document.querySelector('#my-canvas');
+function makePattern() {
+  const resizeImgCanvas = document.createElement('canvas');
+  resizeImgCanvas.width = 250;
+  resizeImgCanvas.height = 200;
 
-    var dataURL = canvas.toDataURL("image/jpeg", 1.0);
+  document.getElementById('myCanvas').toBlob((blob) => {
+    const img = new Image();
+    const url = URL.createObjectURL(blob);
+    img.src = url;
 
-    downloadImage(dataURL, 'my-canvas.jpeg');
-});
+    const callback = () => {
+      // resize image to 250×200
+      const ctx = resizeImgCanvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, resizeImgCanvas.width, resizeImgCanvas.height);
+      // save image to sessionStorage
+      sessionStorage.setItem('patternTile', resizeImgCanvas.toDataURL());
+      // navigate to new page
+      window.location.href = 'result.html';
+    };
 
-// Save | Download image
-function downloadImage() {
-  const result = document.createElement("canvas");
-  result.id = "result";
-  result.width = 3500;
-  result.height = 3000;
-
-  const context = result.getContext("2d");
-  const pattern = context.createPattern(
-    document.getElementById("myCanvas"),
-    "repeat"
-  );
-  context.fillStyle = pattern;
-  context.fillRect(0, 0, result.width, result.height);
-
-  result.toBlob((blob) => {
-    const file = URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-    a.href = file;
-    a.download = "my-pattern.png";
-    a.click();
-
-    URL.revokeObjectURL(a.href);
-    document.getElementById("root").appendChild(result);
-  }, "image/png");
-
-  sessionStorage.setItem("pattern", result.toDataURL());
+    if ('decoding' in img) {
+      img.decode().then(callback);
+    } else {
+      img.onload = callback;
+    }
+  });
 }
