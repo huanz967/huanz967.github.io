@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>__graceArchive.html__</title>
+  </head>
+  <body>
+    <h1>Welcome to Grace's Core 2 Interaction Archive!</h1>
+    <div class="link"><a href="https://huanz967.github.io/studio/projects/cross-platform-storytelling/">Cross-platform storytelling</a></div>
+    <div class="link"><a href="https://huanz967.github.io/studio/projects/stories-as-networks/final/index.html">Stories as Network</a></div>
+    <div class="link"><a href="https://huanz967.github.io/studio/projects/elastic_collection/revision/index.html">Elastic Collections</a></div>
+    <div class="link"><a href="https://huanz967.github.io/studio/projects/input-output/revision/index.html">Input/Output</a></div>
+
+    <div class="link"><a href="https://core-interaction-spring-2021.rejuvenatethe.net/#people">Slack Avatar</a></div>
+    <div class="link"><a href="https://drive.google.com/drive/folders/1cn6nawQ8tNOfsyLMsYuPZhEzRuApk1zi">Screen Time</a></div>
+    <div class="link"><a href="https://drive.google.com/drive/folders/1ezJlVbf5nwEvzXL4wdBdiWlVXqG8156W">Screenshot Portrait</a></div>
+    <div class="link"><a href="https://drive.google.com/drive/folders/1yA_wGADoGlyJCOJiAYzq3KkW1U0uw_UW ">Handmade Code</a></div>
+    <div class="link"><a href="https://docs.google.com/document/d/1YoY5JZPMjHkEmf4unLfN0GtgWE4fDtwRDJN2zYdeX1s/edit?usp=sharing">Interaction & Type Study</a></div>
+    <div class="link"><a href="https://huanz967.github.io/studio/workshops/hover-state/index.html">Hover State</a></div>
+    <div class="link"><a href="https://huanz967.github.io/studio/workshops/flex-box/index.html">Flexbox Calendar</a></div>
+    <div class="link"><a href="https://huanz967.github.io/studio/workshops/filter/index.html">Filter</a></div>
+    <div class="link"><a href="https://huanz967.github.io/studio/projects/elastic_collection/part10/index.html">Favicon</a></div>
+    <div class="link"><a href="https://huanz967.github.io/studio/workshops/text-generator/index.html">Text generator</a></div>
+
+  <div class="eyes">
+    <div class="eye">
+      <div class="ball"></div>
+    </div>
+
+    <div class="eye">
+      <div class="ball"></div>
+    </div>
+  </div>
+
+
+<script>
+  var balls = document.getElementsByClassName("ball");
+  document.onmousemove = function(){
+    var x = event.clientX * 100 / window.innerWidth + "%";
+    var y = event.clientY * 100 / window.innerHeight + "%";
+    //event.clientX => get the horizontal coordinate of the mouse
+    //event.clientY => get the Vertical coordinate of the mouse
+    //window.innerWidth => get the browser width
+    //window.innerHeight => get the browser height
+
+    for(var i=0;i<2;i++){
+      balls[i].style.left = x;
+      balls[i].style.top = y;
+      balls[i].style.transform = "translate(-"+x+",-"+y+")";
+    }
+  }
+
+  // collect all the divs
+  var divs = document.getElementsByClassName('link');
+  // get window width and height
+  var winWidth = window.innerWidth;
+  var winHeight = window.innerHeight;
+
+  // i stands for "index". you could also call this banana or haircut. it's a variable
+  for ( var i=0; i < divs.length; i++ ) {
+
+      // shortcut! the current div in the list
+      var thisDiv = divs[i];
+
+      // get random numbers for each element
+      randomTop = getRandomNumber(0, winHeight);
+      randomLeft = getRandomNumber(0, winWidth);
+
+      // update top and left position
+      thisDiv.style.top = randomTop +"px";
+      thisDiv.style.left = randomLeft +"px";
+
+  }
+
+  // function that returns a random number between a min and max
+  function getRandomNumber(min, max) {
+
+    return Math.random() * (max - min) + min;
+
+  }
+</script>
+
+  </body>
+</html>
